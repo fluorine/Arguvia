@@ -1,7 +1,7 @@
 Arguvia v0.1.0
 ==============
-A function-like argument parser for command-line
-applications.
+This gem contains a function-like argument parser
+for command-line applications.
 
 This is an example of a command-line application
 that uses function-like arguments:
@@ -50,7 +50,7 @@ Examples of valid arguments
 |foo        |`x.foo`    |true    |
 |--etc      |`x._etc `  |true    |
 |-h         |`x._h`     |true    |
-|(none)     |`x.baz`    |nil     |
+|           |`x.baz`    |nil     |
 |func(1)    |`x.func`   |1       |
 |dir(etc)   |`x.dir`    |"etc"   |
 |xs(1, 2, 3)|`x.xs`     |[1,2,3] |
@@ -58,5 +58,5 @@ Examples of valid arguments
 
 To do
 -----
-- Implement support for special symbols.
-- Implement support for literal strings (with internal spaces)
+- Support for special symbols.
+- Support for literal strings (allow internal spaces)
