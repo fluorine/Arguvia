@@ -21,11 +21,6 @@ class Arguvia
     @args[name]
   end
 
-  # Add ghost methods to list of methods
-  def methods
-    super + @args.keys
-  end
-
   # Add responding methods
   def respond_to?(name)
     return true if @args.keys.include? name
@@ -61,14 +56,3 @@ class Arguvia
     end
   end
 end
-
-args = ["hola", "viva-Cristo(Dios, Jesus, 3.14)", "YHWH", "length(-76.99)", "points(-5)"]
-a = Arguvia.new(args)
-
-p a.methods
-p a.hola
-p a.yhwh
-p a.viva_cristo
-p a.length
-p a.points
-p "respond to :hola -> " + a.respond_to?(:hola).to_s

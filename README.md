@@ -42,3 +42,21 @@ the given command-line arguments.
 `Arguvia` class uses the dynamic and metaprogramming
 features of Ruby to generate an object, which members maps
 the given arguments.
+
+Examples of valid arguments
+----------------------------------
+|Argument   |Identifier | Value  |
+|:---------:|:---------:|:------:|
+|foo        |`x.foo`    |true    |
+|--etc      |`x._etc `  |true    |
+|-h         |`x._h`     |true    |
+|(none)     |`x.baz`    |nil     |
+|func(1)    |`x.func`   |1       |
+|dir(etc)   |`x.dir`    |"etc"   |
+|xs(1, 2, 3)|`x.xs`     |[1,2,3] |
+|pair(a, 7) |`x.pair`   |["a", 7]|
+
+To do
+-----
+- Implement support for special symbols.
+- Implement support for literal strings (with internal spaces)
